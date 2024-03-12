@@ -1,5 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*:not(i) {
+  font-family: "Poppins", sans-serif;
+}
+
 body {
-  background-color: hsl(271, 84%, 80%);
+  background-color: #ae9cff;
 }
 
 .container {
