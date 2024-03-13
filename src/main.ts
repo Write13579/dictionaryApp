@@ -83,12 +83,13 @@ ${data[0].meanings[0].definitions[0].example ?? "<i>no example</i>"}
 </p>
 </div>`;
 
-  sound.setAttribute("src", data[0].phonetics?.[0]?.audio ?? ``);
-  sound.play();
+  if (data[0].phonetics?.[0]?.audio !== "") {
+    sound.setAttribute("src", data[0].phonetics?.[0]?.audio ?? ``);
+  }
 }
 
 export function playSound() {
-  console.log("!23");
-
   sound.play();
 }
+
+(window as any).playSound = playSound;
